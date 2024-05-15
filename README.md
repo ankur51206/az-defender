@@ -29,13 +29,9 @@ For Linux Servers
     Download and Install the Agent
         Use the following script to install the agent:
 
-    bash
-
 curl -sSL https://aka.ms/azcmagent | sudo bash
 
     Connect the agent to Azure Arc:
-
-bash
 
     sudo azcmagent connect --resource-group <ResourceGroupName> --tenant-id <TenantID> --subscription-id <SubscriptionID>
 
@@ -78,8 +74,6 @@ For Linux Servers
     Install and Configure the Agent
         Follow the steps to install the Defender for Endpoint agent on your Linux servers.
 
-    bash
-
     wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
     sudo dpkg -i packages-microsoft-prod.deb
     sudo apt-get update
@@ -112,5 +106,3 @@ References
     Onboard Linux servers to the Microsoft Defender for Endpoint service
     Create and manage policies to enforce compliance
     Azure Security Center security policies
-
-By following these steps and using the provided documentation links, you can effectively integrate Microsoft Defender into your on-premises servers and ensure robust security management via Azure.
