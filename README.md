@@ -96,13 +96,10 @@ For Linux Servers
 
 References
 
-    Quickstart: Connect a hybrid machine to Azure using Azure Arc
-    Install the Connected Machine agent on a Windows machine
-    Install the Connected Machine agent on a Linux machine
-    Get started with Microsoft Defender for Cloud
-    Deploy Microsoft Defender for Cloud on hybrid and multi-cloud environments
-    Microsoft Defender for Cloud pricing
-    Onboard Windows servers to the Microsoft Defender for Endpoint service
-    Onboard Linux servers to the Microsoft Defender for Endpoint service
-    Create and manage policies to enforce compliance
-    Azure Security Center security policies
+    https://learn.microsoft.com/en-us/azure/azure-arc/servers/agent-overview
+    https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-portal
+    https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-servers-plan
+    https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/
+    https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm
+    
+    
