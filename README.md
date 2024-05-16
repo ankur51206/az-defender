@@ -89,4 +89,8 @@ sudo azcmagent connect --resource-group <ResourceGroupName> --tenant-id <TenantI
 - Verify Connection.
 
 
-
+[1] https://azure.microsoft.com/en-in/pricing/details/defender-for-cloud/
+[2] https://learn.microsoft.com/en-us/azure/network-watcher/connection-monitor-connected-machine-agent?tabs=WindowsScript
+[3] https://learn.microsoft.com/en-us/azure/azure-arc/servers/agent-overview
+[4] https://learn.microsoft.com/en-us/defender-cloud-apps/get-started
+[5] https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-machines#connect-on-premises-machines-by-using-the-azure-portal
