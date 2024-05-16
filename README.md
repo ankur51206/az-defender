@@ -62,6 +62,7 @@ curl -sSL https://aka.ms/azcmagent | sudo bash
         Microsoft Defender for Cloud pricing
 
 6. Install Microsoft Defender for Endpoint
+
 For Windows Servers
 
     Onboard the Server
@@ -93,6 +94,82 @@ For Linux Servers
         In Defender for Cloud, review the security recommendations for your Arc-enabled servers.
         Apply the recommended configurations to improve your security posture.
         Azure Security Center security policies
+
+
+
+Connect On-Premises Machines Using the Azure Portal
+
+Prerequisites
+
+    An Azure subscription with Microsoft Defender for Cloud enabled.
+    An existing Log Analytics workspace.
+
+Steps to Onboard Windows Servers
+
+    Sign in to the Azure portal:
+        Go to Azure portal.
+
+    Access Microsoft Defender for Cloud:
+        In the Azure portal, search for "Microsoft Defender for Cloud" and select it.
+
+    Configure Non-Azure Servers:
+        In the Microsoft Defender for Cloud dashboard, select Getting started.
+        Under Add non-Azure servers, click on Configure.
+
+    Select or Create a Log Analytics Workspace:
+        You will be prompted to select an existing Log Analytics workspace or create a new one if you don't have any.
+        After selecting or creating the workspace, click OK.
+
+    Download and Install the Windows Agent:
+        A link to download the Windows Agent will be provided. Click the link to download.
+        Run the installer on your target machine.
+        During the installation, you will be prompted to enter the Workspace ID and Primary Key. These can be found in the Log Analytics workspace settings in the Azure portal.
+
+    Configure the Agent:
+        Follow the prompts in the installation wizard to complete the setup.
+        Ensure the machine has internet connectivity to communicate with Azure.
+
+    Verify Connection:
+        Go back to the Azure portal, navigate to Microsoft Defender for Cloud > Inventory.
+        Verify that your server appears in the list with a healthy status.
+
+Steps to Onboard Linux Servers
+
+    Sign in to the Azure portal:
+        Go to Azure portal.
+
+    Access Microsoft Defender for Cloud:
+        In the Azure portal, search for "Microsoft Defender for Cloud" and select it.
+
+    Configure Non-Azure Servers:
+        In the Microsoft Defender for Cloud dashboard, select Getting started.
+        Under Add non-Azure servers, click on Configure.
+
+    Select or Create a Log Analytics Workspace:
+        You will be prompted to select an existing Log Analytics workspace or create a new one if you don't have any.
+        After selecting or creating the workspace, click OK.
+
+    Download and Install the Linux Agent:
+        A wget command will be provided. Copy this command.
+        On your Linux machine, open a terminal and run the copied wget command to download and install the agent.
+
+    Run the Installation Command:
+        Execute the wget command in the terminal. This will download the necessary installation files and begin the installation process.
+        Follow the on-screen instructions to complete the installation.
+
+    Verify Connection:
+        Validate that the Operations Management Suite Agent is installed by running pgrep omsagent. This command should return the omsagent process ID.
+        The logs for the agent can be found at /var/opt/microsoft/omsagent/<workspace id>/log/.
+
+    Confirm in Azure Portal:
+        Go back to the Azure portal, navigate to Microsoft Defender for Cloud > Inventory.
+        Verify that your Linux server appears in the list.
+
+For detailed instructions and troubleshooting, refer to the Microsoft documentation.
+
+
+
+
 
 References
 
