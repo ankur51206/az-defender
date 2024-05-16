@@ -89,9 +89,41 @@ sudo azcmagent connect --resource-group <ResourceGroupName> --tenant-id <TenantI
 - Verify Connection.
 
 
+---
+
+### File Integrity Monitoring (FIM)
+
+
+File Integrity Monitoring (FIM) examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
+
+FIM (file integrity monitoring) uses the Azure Change Tracking solution to track and identify changes in your environment. When FIM is enabled, you have a Change Tracking resource of type Solution. If you remove the Change Tracking resource, you'll also disable the File Integrity Monitoring feature in Defender for Cloud. FIM lets you take advantage of Change Tracking directly in Defender for Cloud. For data collection frequency details, see Change tracking data collection details.
+
+Defender for Cloud recommends entities to monitor with FIM, and you can also define your own FIM policies or entities to monitor. FIM informs you about suspicious activity such as:
+
+- File and registry key creation or removal
+- File modifications (changes in file size, access control lists, and hash of the content)
+- Registry modifications (changes in size, access control lists, type, and content)
+
+Many regulatory compliance standards require implementing FIM controls, such as PCI-DSS and ISO 17799.
+
+To provide File Integrity Monitoring (FIM), the Azure Monitor Agent (AMA) collects data from machines according to data collection rules. When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
+
+File Integrity Monitoring with the Azure Monitor Agent offers:
+
+- Compatibility with the unified monitoring agent - Compatible with the Azure Monitor Agent that enhances security, reliability, and facilitates multi-homing experience to store data.
+- Compatibility with tracking tool- Compatible with the Change tracking (CT) extension deployed through the Azure Policy on the client's virtual machine. You can switch to Azure Monitor Agent (AMA), and then the CT extension pushes the software, files, and registry to AMA.
+- Simplified onboarding- You can onboard FIM from Microsoft Defender for Cloud.
+- Multi-homing experience – Provides standardization of management from one central workspace. You can transition from Log Analytics (LA) to AMA so that all VMs point to a single workspace for data collection and maintenance.
+- Rules management – Uses Data Collection Rules to configure or customize various aspects of data collection. For example, you can change the frequency of file collection.
+
+
+
+
 ### Reference
 
 - (https://azure.microsoft.com/en-in/pricing/details/defender-for-cloud/)
+- (https://learn.microsoft.com/en-us/azure/defender-for-cloud/file-integrity-monitoring-enable-ama)
+- (https://learn.microsoft.com/en-us/azure/defender-for-cloud/file-integrity-monitoring-overview)
 - (https://learn.microsoft.com/en-us/azure/network-watcher/connection-monitor-connected-machine-agent?tabs=WindowsScript)
 - (https://learn.microsoft.com/en-us/azure/azure-arc/servers/agent-overview)
 - (https://learn.microsoft.com/en-us/defender-cloud-apps/get-started)
